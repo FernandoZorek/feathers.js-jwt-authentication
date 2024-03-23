@@ -1,7 +1,7 @@
 {
   "name": "feathers-js-jwt-authentication",
-  "description": "",
-  "version": "0.0.0",
+  "description": "This project is a base setup for a FeathersJS application. It is designed to serve as a starting point for other projects, providing a basic structure and common functionalities such as user authentication.",
+  "version": "1.0.0",
   "homepage": "",
   "private": true,
   "main": "src",
