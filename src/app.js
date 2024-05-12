@@ -9,7 +9,8 @@ const feathers = require('@feathersjs/feathers');
 const configuration = require('@feathersjs/configuration');
 const express = require('@feathersjs/express');
 const socketio = require('@feathersjs/socketio');
-
+const swagger = require('feathers-swagger');
+const swaggerDocs = require('./swagger.js');
 
 const middleware = require('./middleware');
 const services = require('./services');
@@ -36,9 +37,23 @@ app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', express.static(app.get('public')));
 
+app.configure(swagger({
+  specs: {
+    info: {
+      title: ' FeathersJS JWT application',
+      description: 'This project is a base setup for a FeathersJS application. It is designed to serve as a starting point for other projects, providing a basic structure and common functionalities such as user authentication.',
+      version: '1.0.0',
+    },
+  },
+  ui: swagger.swaggerUI({
+    docsPath: '/docs'
+  }),
+}));
+
 // Set up Plugins and providers
 app.configure(express.rest());
 app.configure(socketio());
+
 
 app.configure(sequelize);
 
@@ -50,6 +65,7 @@ app.configure(services);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
+app.configure(swaggerDocs)
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound());
 app.use(express.errorHandler({ logger }));

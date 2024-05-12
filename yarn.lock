@@ -2023,6 +2023,13 @@ feathers-sequelize@^6.3.4:
     "@feathersjs/commons" "^4.5.15"
     "@feathersjs/errors" "^4.5.15"
 
+feathers-swagger@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/feathers-swagger/-/feathers-swagger-3.0.0.tgz#5dfd6994179ae1728dfc9aecb1d974e9b52882b6"
+  integrity sha512-RBM3FZpV9teyPZA1TrsZ49an2q07LEFZUVMJeib2hEo2+H2nj3YM3wlm/kXePUZQPD5ugaWXwgnJJlADW/+w1A==
+  dependencies:
+    lodash "^4.17.21"
+
 fecha@^4.2.0:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-4.2.3.tgz#4d9ccdbc61e8629b259fdca67e65891448d569fd"
@@ -3998,6 +4005,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swagger-ui-dist@^5.17.7:
+  version "5.17.7"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-5.17.7.tgz#64113eefe01b05d49845cf163793c94c5b71a303"
+  integrity sha512-hKnq2Dss6Nvqxzj+tToBz0IJvKXgp7FExxX0Zj0rMajXJp8CJ98yLAwbKwKu8rxQf+2iIDUTGir84SCA8AN+fQ==
 
 test-exclude@^6.0.0:
   version "6.0.0"

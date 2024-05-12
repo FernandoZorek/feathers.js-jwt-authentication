@@ -22,7 +22,7 @@ services:
     environment:
       - DB_USER=root
       - DB_PASSWORD=root
-      - DB_HOST=${HOSTIP}
+      - DB_HOST=db-feathers-js
       - DB_PORT=3306
       - DB_SCHEMA=feathers
     depends_on:
@@ -31,19 +31,19 @@ services:
 
   db-feathers-js:
     container_name: db-feathers-js
-    image: mysql:8.0.28
+    image: mysql:8.0.0
     restart: always
     environment:
       - MYSQL_DATABASE=feathers
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_USER=root
+      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_TCP_PORT=3306
     ports:
       - "3306:3306"
     volumes:
       - ./docker/db/mysql:/var/lib/mysql
     healthcheck:
-      test: "mysql $$MYSQL_DATABASE -u$$MYSQL_USER -p$$MYSQL_PASSWORD -e 'SELECT 1;'"
+      test: "mysql $$MYSQL_DATABASE -u$$MYSQL_ROOT_USER -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1;'"
       timeout: 3s
       retries: 3
 
