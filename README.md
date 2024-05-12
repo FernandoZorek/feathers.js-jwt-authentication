@@ -20,6 +20,7 @@ This project is a base setup for a FeathersJS application. It is designed to ser
 This project uses several open source projects to function correctly::
 
 - [Docker] - Platform for developing, shipping, and running applications using containerization;
+- [Swagger] - Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger;
 - [Nginx] - Advanced Load Balancer, Web Server, Reverse Proxy;
 - [MYSQL] -  - Relational database management system for data storage;
 - [Node.js] - JavaScript runtime built on Chrome’s V8 JavaScript engine;
@@ -42,6 +43,13 @@ yarn
 ```bash
 docker-compose up
 ```
+
+### Documentation with Swagger
+
+```bash
+Open http://localhost:3030/docs
+```
+
 
 ### Config DB
 
@@ -114,6 +122,7 @@ MIT
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 [Docker]: <https://docs.docker.com/>
+[Swagger]: <https://github.com/feathersjs-ecosystem/feathers-swagger>
 [Nginx]: <https://www.nginx.com/>
 [MYSQL]: <https://dev.mysql.com/doc/>
 [Node.js]: <https://nodejs.org/docs/latest/api/>
