@@ -8,6 +8,8 @@ This project is a base setup for a FeathersJS application. It is designed to ser
 > other projects, providing a basic structure and
 > common functionalities such as user authentication.
 
+![ScreenShot](https://repository-images.githubusercontent.com/776563746/2c3d688f-3d6f-48bc-8f3f-0cce559c448d)
+
 ## Features
 
 - Create API RESTful to authenticate users with jwt token;
